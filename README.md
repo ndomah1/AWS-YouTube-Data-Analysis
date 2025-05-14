@@ -26,7 +26,6 @@ Insights and recommendations are provided on the following key areas:
 - **Engagement Drivers**
 - **Dashboard-Ready Reporting Layer**
 
----
 
 ## Data Structure & Initial Checks
 
@@ -44,7 +43,6 @@ The project involved creating three distinct tables:
 
 The initial ingestion was automated with AWS CLI ([`s3_cli_command.sh`](https://github.com/ndomah1/AWS-YouTube-Data-Analysis/blob/main/scripts/s3_cli_command.sh)). JSON files were grouped together, and each CSV was placed into a partition-specific location.
 
----
 
 ## Executive Summary
 
@@ -58,7 +56,6 @@ To support our client’s YouTube campaign, I built a fully automated data pipel
 
 ![Final Dashboard](https://github.com/ndomah1/AWS-YouTube-Data-Analysis/blob/main/img/dashboard.jpg)
 
----
 
 ## Insights Deep Dive
 
@@ -80,7 +77,6 @@ To support our client’s YouTube campaign, I built a fully automated data pipel
 * Likes by snippet_title therefore reflect **engagement levels per content category**, not per video title length.
 * This helped answer the question: “Which types of videos get the most engagement?”
 
----
 
 ### Dashboard-Ready Reporting Layer
 
@@ -95,7 +91,6 @@ Key details:
 - JSON normalization was handled by [`lambda_function.py`](https://github.com/ndomah1/AWS-YouTube-Data-Analysis/blob/main/scripts/lambda_function.py) using `awswrangler`
 - All writing was done with partitioning by region and category
 
----
 
 ## Recommendations
 
@@ -107,7 +102,6 @@ For the client’s YouTube ad strategy, I recommended:
 * **Schedule weekly performance reviews** using the live QuickSight dashboard and Athena queries.
 * **Scale this pipeline** to include streaming ingestion or expand to other platforms (e.g., TikTok or Instagram).
 
----
 
 ## Assumptions and Caveats
 
